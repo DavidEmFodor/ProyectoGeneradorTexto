@@ -1,7 +1,9 @@
 Lyric Generator With Graph
 
 Co-Creators:
+
  -DavidEmFodor
+ 
  -vaayapordios
 
 This project generates lyrics from text data using a graph-based approach. 
