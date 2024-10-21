@@ -107,7 +107,7 @@ def fileReading():
     phrases = []
 
     for x in range(10):
-        filename = f"doc{x}.txt"
+        filename = f"TestProyecto/canciones/doc{x}.txt"
 
         if not os.path.exists(filename):
             print(f"{filename} Do not exist")

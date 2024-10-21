@@ -16,8 +16,9 @@ class graph:
         # Randomly select a starting node from the nodeList
         current_node = random.choice(self.nodeList)
         lyric = ""  # Initialize an empty string to build the lyric
-
-        for _ in range(numberIterations):
+        for count in range(numberIterations):
+            if count%50==0 and numberIterations!=0:
+                lyric+=". \n\n"
             lyric += " " + current_node.content  # Append the current node's content to the lyric
             edgeList = current_node.getEdgeList()  # Get the list of edges from the current node
 
@@ -33,6 +34,9 @@ class graph:
             current_node = random.choices(nodes, weights=weights)[0]
 
         # Initialize the text-to-speech engine
+        lyric = lyric.lstrip().capitalize()
+        lyric = "\n".join(sentence.lstrip().capitalize() for sentence in lyric.split("\n"))
+        lyric += "."
         engine = pyttsx3.init()
         engine.say(lyric)  # Use the engine to say the generated lyric
         print(lyric)  # Print the generated lyric

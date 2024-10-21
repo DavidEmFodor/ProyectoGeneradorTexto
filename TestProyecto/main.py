@@ -6,15 +6,15 @@ from estructuraDeDatos.graph import graph
 from estructuraDeDatos.edge import edge
 from estructuraDeDatos.node import node
 
-def fileReading(): 
-    """ Returns list of strings
+""" Returns list of strings
 
-    Go through 10 .txt docs in the canciones folder, if it doesn't find it, it tells you,
-    it cleans all the unwanted characters and appends it to the phrases list that will be returned
-    """
+Go through 10 .txt docs in the canciones folder, if it doesn't find it, it tells you,
+it cleans all the unwanted characters and appends it to the phrases list that will be returned
+"""
+def fileReading(): 
     phrases = []
     for x in range(0, 10):
-        filename = f"canciones/doc{x}.txt"
+        filename = f"TestProyecto/canciones/doc{x}.txt"
         if not os.path.exists(filename):
             print(f"{filename} don't found")
             continue
@@ -66,7 +66,7 @@ if phrases:
                 new_edge = edge(nodes, nextNode)
                 nodes.addEdgeToList(new_edge)
     
-    # Start the graph with a parameter (e.g., 1000)
+    # Start the graph with a parameter (e.g., 1000) that will be the number of words generated
     Maingraph.start(1000)
 else:
     print("Graph couldn't be created")
