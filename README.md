@@ -4,7 +4,7 @@ Co-Creators:
 
  -DavidEmFodor
  
- -vaayapordios
+ -VRuizInformatica
 
 This project generates lyrics from text data using a graph-based approach. 
 It reads text from .txt files, creates nodes and edges between words, and uses a random weighted selection to generate new sequences of words, 
